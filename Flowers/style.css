@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 767px) {
+    .Header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .landing .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .features .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+
+@media (max-width: 767px) {
+    .Bouquets .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .author {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+.Header {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+}
+
+.Header .logo {
+    color: rgb(236, 114, 114);
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.Header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+
+}
+
+.Header .nav {
+    display: flex;
+}
+
+
+.Header .nav>li,
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    color: rgb(236, 114, 114);
+    text-decoration: none;
+
+
+}
+
+
+.landing {
+    background-color: rgb(237, 237, 237);
+}
+
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+
+}
+
+.landing.person {
+    position: absolute;
+    right: 20px;
+
+}
+
+.landing.text {
+
+    position: absolute;
+    top: 70px;
+    left: 20px;
+
+}
+
+#shop {
+    color: white;
+    background-color: rgb(255, 135, 135);
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+    min-height: 30px;
+    min-width: 120px;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+    gap: 5px;
+    padding: 5px;
+
+
+
+    padding-left: 150px;
+
+
+
+
+
+
+}
+
+.feature {
+
+    background-color: white;
+    position: relative;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px rgb(255, 135, 135);
+    height: 140px;
+    width: 200px;
+
+    border-radius: 60px;
+
+    text-align: center;
+
+
+
+
+}
+
+
+
+
+.Bouquets>h1 {
+    text-align: center;
+}
+
+
+.Bouquets .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    gap: 10px;
+
+
+}
+
+
+
+.Bouquet {
+
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+    height: 220px;
+    width: 300px;
+
+}
