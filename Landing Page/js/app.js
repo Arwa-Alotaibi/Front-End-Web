@@ -14,11 +14,6 @@
 */
 
 /**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-
-/**
  * Define Global Variables
  * 
 */
@@ -43,13 +38,17 @@ function createss() {
 }
 createss();
 //Section Active State
-function active_class(){
-    for ( active_section of All_Section) {
-        if(active_section.getBoundingClientRect().top >=0 ){
-            active_section.classList.add("your-active-class")
+function active_State(){
+    for ( section= 0; section<= All_Section.length; section++) {
+        const size = All_Section[section].getBoundingClientRect();
+
+        if(size.top >=0 ){
+            //active state on the current section
+            All_Section[section].classList.add("your-active-class")
         }
         else{
-            active_section.classList.remove("your-active-class")
+            // Remove active state
+            All_Section[section].classList.remove("your-active-class")
 
         }
 
@@ -57,15 +56,12 @@ function active_class(){
     }
 }
 
-document.addEventListener("scroll", active_class);
-
+document.addEventListener("scroll", active_State);
+active_State();
 //Scroll to Anchor
-
 // //When clicking an item from the navigation menu, the link should scroll to the appropriate section.
- nav_bar.addEventListener('click' , function(event){
-      event.preventDefault();
-       document.addEventListener("scroll",Active_class)
-       
+//  All_Section.addEventListener('click' , function(event){
+//       event.preventDefault();
+//        document.addEventListener("scroll",active_class)
 
-
-    });
+//     });

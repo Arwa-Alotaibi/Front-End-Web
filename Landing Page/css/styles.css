@@ -26,6 +26,13 @@ h1 {
     margin: 2em 1rem;
 }
 
+@media (min-width: 35em) {
+    .page__header .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 @media (min-width: 35em){
     h1 {
         font-size: 7em;
