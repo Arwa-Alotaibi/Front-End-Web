@@ -24,8 +24,7 @@
 */
 const nav_bar = document.getElementById("navbar__list");
 
-//array containe all section 
-const All_Section =Array.from(document.querySelectorAll("section"));
+const All_Section =document.querySelectorAll("section");
 
 /**
  * End Global Variables
@@ -43,24 +42,30 @@ function createss() {
     }
 }
 createss();
-
 //Section Active State
-function Active_class(event){
-    //remove active class
-    event.target.parentElement.querySelectorAll('section').forEach(active => {
-        active.classList.remove("your-active-class ");
+function active_class(){
+    for ( active_section of All_Section) {
+        if(active_section.getBoundingClientRect().top >=0 ){
+            active_section.classList.add("your-active-class")
+        }
+        else{
+            active_section.classList.remove("your-active-class")
+
+        }
+
         
-    });
-
-    event.target.classList.add("your-active-class")
-
+    }
 }
 
+document.addEventListener("scroll", active_class);
 
-Active_class();
+//Scroll to Anchor
+
 // //When clicking an item from the navigation menu, the link should scroll to the appropriate section.
  nav_bar.addEventListener('click' , function(event){
-    event.preventDefault();
-    document.addEventListener('scroll',Active_State)
+      event.preventDefault();
+       document.addEventListener("scroll",Active_class)
+       
 
- });
+
+    });
