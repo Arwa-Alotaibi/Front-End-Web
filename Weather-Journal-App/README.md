@@ -7,4 +7,3 @@
 
 ## Result
 
-![Result](../website\images\Result.png)
