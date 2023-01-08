@@ -7,4 +7,4 @@
 
 ## Result
 
-![Result](.\images\Result.png)
+![Result](..\images\Result.png)
