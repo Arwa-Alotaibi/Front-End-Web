@@ -7,6 +7,6 @@
 
 ## Result
 
-![Result](./website\images\Result.jpg)
+   <img src="/website\images\Result.jpg" width="250"/>
 
 
