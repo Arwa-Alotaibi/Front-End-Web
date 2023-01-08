@@ -7,6 +7,6 @@
 
 ## Result
 
-![Result](./website\images\Result.png)
+![Result](/website\images\Result.png)
 
 
