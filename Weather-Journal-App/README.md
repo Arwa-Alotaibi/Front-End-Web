@@ -8,5 +8,3 @@
 ## Result
 
 ![Result](../images/Result.png)
-
-
