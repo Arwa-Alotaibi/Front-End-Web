@@ -21,6 +21,8 @@ const nav_bar = document.getElementById("navbar__list");
 
 const All_Section =document.querySelectorAll("section");
 
+var navli = document.querySelectorAll('nav a')
+
 /**
  * End Global Variables
  * 
@@ -32,36 +34,50 @@ function createss() {
         section_name = section.getAttribute('data-nav');
         section_id = section.getAttribute('id');
         create_item = document.createElement('li');
-        create_item.innerHTML = `<li><a href='#${section_id}' class='menu__link' >${section_name}</a></li>`;
+        create_item.innerHTML = `<a href='#${section_id}' class='menu__link' >${section_name}</a>`;
        nav_bar.appendChild(create_item);
     }
 }
 createss();
 //Section Active State
 function active_State(){
-    for ( section= 0; section<= All_Section.length; section++) {
-        const size = All_Section[section].getBoundingClientRect();
+    
+    for ( const section of All_Section) {
+        let size = section.getBoundingClientRect();
+        let currentid=section.attributes.id.value;
+        let active_link = `nav a[href="#${currentid}"]`;
+        if(size.top<= 200 && size.bottom >= 150){
+            //apply active state on current section and corresponding Nav link
+            section.classList.add("your-active-class");
+            document.querySelector(active_link).classList.add("active_link");
 
-        if(size.top >=0 ){
-            //active state on the current section
-            All_Section[section].classList.add("your-active-class")
         }
-        else{
-            // Remove active state
-            All_Section[section].classList.remove("your-active-class")
-
+       else{
+            //Remove active state from other section and corresponding Nav link
+            section.classList.remove("your-active-class")
+            document.querySelector(active_link).classList.remove("active_link");
         }
 
-        
     }
 }
 
-document.addEventListener("scroll", active_State);
-active_State();
-//Scroll to Anchor
-// //When clicking an item from the navigation menu, the link should scroll to the appropriate section.
-//  All_Section.addEventListener('click' , function(event){
-//       event.preventDefault();
-//        document.addEventListener("scroll",active_class)
 
-//     });
+active_State();
+
+document.addEventListener("scroll", function() {
+    active_State();
+  });
+
+
+
+//Scroll to Anchor
+ let ALLlink =document.querySelectorAll('navbar__list')
+
+ALLlink.forEach(link=>{
+    link.addEventListener('click',function(event){
+         event.preventDefault();
+         document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth'});
+     })
+
+
+ })

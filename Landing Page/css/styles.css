@@ -10,6 +10,7 @@
 
 
 /* ---- Base Rules ---- */
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -26,12 +27,6 @@ h1 {
     margin: 2em 1rem;
 }
 
-@media (min-width: 35em) {
-    .page__header .navbar__menu {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
 @media (min-width: 35em){
     h1 {
@@ -95,6 +90,11 @@ section {
     transition: ease 0.3s all;
 }
 
+nav ul .active_link  {
+    background-color: #666;
+    color: white;
+  }
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -114,7 +114,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
