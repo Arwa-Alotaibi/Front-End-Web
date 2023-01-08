@@ -1,5 +1,5 @@
 # Weather-Journal App Project ☔
-_________________
+
 
 ## Project Objective
 
@@ -7,4 +7,4 @@ _________________
 
 ## Result
 
-image.png
+![Result](website\images\Result.png)
