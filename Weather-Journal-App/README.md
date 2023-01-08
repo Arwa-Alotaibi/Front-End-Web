@@ -7,6 +7,6 @@
 
 ## Result
 
-   <img src="/website\images\Result.jpg" width="250"/>
+   <img src="./website\images\Result.jpg" width="250"/>
 
 
