@@ -10,5 +10,6 @@
    <img src="./website\images\form1.png" witdh='300' />
 
 2-After you click on the "Generate" button you will get an information about weather in the city.
-   <img src="./website\images\Result1.png" witdh='300' />
+
+   <img src="./website\images\Result2.png" witdh='300' />
 
