@@ -87,6 +87,17 @@ font-size: large;
 
 
   #entryHolder{
-    text-align: center;
+    display: flex;
+
+    justify-content: space-evenly;
+
+    padding: 5px;
+
+
+  
+
 
   }
+
+
+

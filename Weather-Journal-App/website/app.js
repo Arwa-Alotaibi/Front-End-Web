@@ -84,7 +84,7 @@ const updateUI = async () => {
     try {
         const alldata = await req.json();
         //city
-        document.getElementById('city').innerHTML = "Now in <strong>" + alldata.city + "</strong>";
+        document.getElementById('city').innerHTML = alldata.city ;
 
         document.getElementById('date').innerHTML = alldata.date;
 
